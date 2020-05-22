@@ -1,6 +1,6 @@
 ;
 ; ======================
-;        Ядро
+;        РЇРґСЂРѕ
 ; ======================
 ;
 ;struc dpc
@@ -102,7 +102,7 @@ InsertQueueDpc:
 	.while	ecx,g,0
 	     mov     edx, dword [eax + dpc_offset_proc]
 
-	     ; DPC свободен? Да - заполняем и возвращаемся
+	     ; DPC СЃРІРѕР±РѕРґРµРЅ? Р”Р° - Р·Р°РїРѕР»РЅСЏРµРј Рё РІРѕР·РІСЂР°С‰Р°РµРјСЃСЏ
 	     .if     edx,e,0
 		  invoke  AcquireMutex, dpc_queue_lock
 
